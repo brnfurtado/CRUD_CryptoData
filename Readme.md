@@ -37,7 +37,9 @@ Just running the program with the option "http" in Visual Studio, should open th
 then, just add the "/swagger" to the end, such as "http://localhost:5265/swagger", and the available API Requests such be visible.
 
 
-### CloudDeployment
+### Interacting With the published API
+In case of testing with the public published api, all requests must be made for **HOST** = , **Port** = and **HTTPS protocol**
+such as **http://XXXX:5265/swagger**
 
 
 
