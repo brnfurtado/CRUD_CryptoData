@@ -56,34 +56,40 @@ no additional parameters are needed.
 ### Add Subscription
 In order to add a new subscription, the user can make a **PUT** request with the parameters:
 id, sourceName, cryptoPairName and frequency, to the endpoint **/api/Subscriptions** such as the following example:
+```json
 {
   "id": 0,
   "sourceName": "Binance",
   "cryptoPair": "BTCUSDT",
   "frequencyMS": 30000
 }
+```
 
 ### Update Subscription
 In order to update an existing subscription, the user can make a **POST** request with the parameters:
 id, sourceName, cryptoPairName and frequency, to the endpoint **/api/Subscriptions** such as the following example:
+```json
 {
   "id": 0,
   "sourceName": "Binance",
   "cryptoPair": "BTCUSDT",
   "frequencyMS": 30000
 }
+```
 
 ### Remove Subscription
 In order to remove an existing subscription, the user can make a **DELETE** request with the parameters:
 id, to the endpoint **/api/Subscriptions** such as the following example:
+```json
 {
   "id": 0
 }
-
+```
 
 ### Retrieve BookData
 In order to retrieve database bookvalues saved for a CryptoPair, the user can make a **POST** request with the parameters:
 List of sourceNames, list of cryptoPairName and limitrows, to the endpoint **/api/RetrieveBookData** such as the following example:
+```json
 {
   "sourceNames": [
     "Binance",
@@ -98,3 +104,4 @@ List of sourceNames, list of cryptoPairName and limitrows, to the endpoint **/ap
   ],
   "limitRows": 10
 }
+```
