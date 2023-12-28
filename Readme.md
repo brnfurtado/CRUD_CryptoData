@@ -34,7 +34,8 @@ Then, to automatically create the database schemas and tables needed, the user c
 and run "dotnet ef database update" in the cmd to update the database, inside the project file folder.
 In a windows enviroment, the user can use simpler commands in the Package Manager Console, just Add-Migration "{MigrationName}" and Update-Database.
 Just running the program with the option "http" in Visual Studio, should open the web browser in the designed localhost port by swagger,
-then, just add the "/swagger" to the end, such as "http://localhost:5265/swagger", and the available API Requests such be visible.
+make sure the URL looks something like this: "http://localhost:5265/swagger", Swagger can add an extra "/", or not add the "/swagger" sometimes.
+After launching, the available API Requests such be visible.
 
 
 ### Interacting With the published API
