@@ -49,7 +49,6 @@ namespace WebApplication1.Infrastructure.Controllers
                 return checkValidResult;
             }
 
-
             ICryptoDataSource cryptoDataSource = await AuxStaticCode.GetDataSourceByName(subscription.SourceName);
 
             if (!cryptoDataSource.listValidCryptoPairs.Contains(subscription.CryptoPair))
@@ -153,5 +152,6 @@ namespace WebApplication1.Infrastructure.Controllers
 
             return oldSubscriptionResult.FirstOrDefault();
         }
+
     }
 }

@@ -138,6 +138,8 @@ namespace WebApplication1.Infrastructure.Controllers
 
         private async Task<List<BookData>> QueryBookDataBySourceNameAndCryptoPair(List<string> sourceNames, List<string> cryptoPairs, int limit)
         {
+            var allData = _appDbContext.bookDatas.ToList();
+
             var bookDataResult = (from bookData in _appDbContext.bookDatas
                                         where (sourceNames.Contains(bookData.SourceName) && cryptoPairs.Contains(bookData.CryptoPair))
                                         select bookData).Take(limit);

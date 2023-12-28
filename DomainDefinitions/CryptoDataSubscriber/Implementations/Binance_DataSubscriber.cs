@@ -20,7 +20,7 @@ namespace DomainDefinitions.CryptoDataSubscriber.Implementations
                 if (instance == null)
                 {
                     instance = new Binance_DataSubscriber();
-                    instance.SetSelfNameAndID("BINANCE", 1);
+                    instance.SetSelfNameAndID("Binance", 1);
                 }
                 return instance;
             }

@@ -28,10 +28,13 @@ A real orderbook can be seen at: https://www.binance.com/en/trade/BTC_USDT?type=
 ## Setup
 
 ### LocalTesting
-After cloning the code from github, the user needs to set a working MySQL database in the "AppDbConnectionString" variable in "appsettings.json".
+After cloning the code from github, by default the application database used will be maintained in memory,
+but the user can also set a working MySQL database in the "AppDbConnectionString" variable in "appsettings.json".
 Then, to automatically create the database schemas and tables needed, the user can add a migration via the command "dotnet ef migrations add MyMigration"
 and run "dotnet ef database update" in the cmd to update the database, inside the project file folder.
 In a windows enviroment, the user can use simpler commands in the Package Manager Console, just Add-Migration "{MigrationName}" and Update-Database.
+Just running the program with the option "http" in Visual Studio, should open the web browser in the designed localhost port by swagger,
+then, just add the "/swagger" to the end, such as "http://localhost:5265/swagger", and the available API Requests such be visible.
 
 
 ### CloudDeployment

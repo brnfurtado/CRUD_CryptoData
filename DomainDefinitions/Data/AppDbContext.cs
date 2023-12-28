@@ -8,6 +8,6 @@ namespace DomainDefinitions.Data
         public DbSet<BookData> bookDatas { get; set; }
         public DbSet<Subscription> subscriptions { get; set; }
 
-        public AppDbContext(DbContextOptions options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
     }
 }

@@ -20,7 +20,7 @@ namespace DomainDefinitions.CryptoDataSubscriber.Implementations
                 if (instance == null)
                 {
                     instance = new Coinbase_DataSubscriber();
-                    instance.SetSelfNameAndID("COINBASE", 2);
+                    instance.SetSelfNameAndID("Coinbase", 2);
                 }
                 return instance;
             }

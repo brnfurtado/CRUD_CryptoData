@@ -68,10 +68,8 @@ namespace LocalTester
 
             _appDbContext.bookDatas.Add(bookData);
             await _appDbContext.SaveChangesAsync();
-            //AuxStaticCode.Print($"[{DateTimeOffset.UtcNow}] Tester received [{cryptoDataSourceName}]-[{cryptoPair}] data with " +
-            //    $"first values [{bookDataValues[1]},{bookDataValues[0]}] - [{bookDataValues[2]},{bookDataValues[3]}]");
-
-
+            AuxStaticCode.Print($"[{DateTimeOffset.UtcNow}] Tester received [{cryptoDataSourceName}]-[{cryptoPair}] data with " +
+                $"first values [{bookDataValues[1]},{bookDataValues[0]}] - [{bookDataValues[2]},{bookDataValues[3]}]");
         }
     }
 }
