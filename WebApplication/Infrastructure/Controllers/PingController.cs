@@ -14,7 +14,7 @@ namespace WebApplication1.Infrastructure.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return new OkResult();
+            return new OkObjectResult("Connected");
         }
     }
 }
