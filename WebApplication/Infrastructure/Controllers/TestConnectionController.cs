@@ -7,14 +7,14 @@ using System.Text.Json;
 
 namespace WebApplication1.Infrastructure.Controllers
 {
-    [Route("/ping")]
+    [Route("/")]
     [ApiController]
-    public class PingController
+    public class TestConnectionController
     {
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return new OkObjectResult("PingReceived");
+            return new OkResult();
         }
     }
 }
