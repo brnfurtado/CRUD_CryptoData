@@ -40,8 +40,8 @@ chooses another port.
 
 
 ### Interacting With the published API
-In case of testing with the public published api, all requests must be made for **HOST** = , **Port** = 5000 and **HTTPS protocol**
-such as **http://XXXX:5000/swagger**. All requests can be made directly, or from the SwaggerUI in browser.
+In case of testing with the public published api, all requests must be made for **HOST** = jymzdvmivm.ap-southeast-1.awsapprunner.com, and **HTTPS protocol**
+such as **https://jymzdvmivm.ap-southeast-1.awsapprunner.com/swagger/index.html**. All requests can be made directly, or from the SwaggerUI in browser.
 
 
 
