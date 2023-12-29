@@ -2,7 +2,6 @@
 using DomainDefinitions.Data;
 using DomainDefinitions.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using DomainDefinitions.AuxStaticCode;
 using DomainDefinitions.Interfaces;

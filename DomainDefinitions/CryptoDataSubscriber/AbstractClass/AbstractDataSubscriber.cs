@@ -8,7 +8,6 @@ using System.Linq;
 using System.Net.WebSockets;
 using System.Runtime.CompilerServices;
 using System.Xml.XPath;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DomainDefinitions.CryptoDataSubscriber.AbstractClasses
 {

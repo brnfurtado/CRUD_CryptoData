@@ -35,12 +35,13 @@ and run "dotnet ef database update" in the cmd to update the database, inside th
 In a windows enviroment, the user can use simpler commands in the Package Manager Console, just Add-Migration "{MigrationName}" and Update-Database.
 Just running the program with the option "http" in Visual Studio, should open the web browser in the designed localhost port by swagger,
 make sure the URL looks something like this: "http://localhost:5265/swagger", Swagger can add an extra "/", or not add the "/swagger" sometimes.
-After launching, the available API Requests such be visible.
+After launching, the available API Requests such be visible. Worth checking the port set in the "lauchSettings.json", in case the projects automatically
+chooses another port.
 
 
 ### Interacting With the published API
-In case of testing with the public published api, all requests must be made for **HOST** = , **Port** = and **HTTPS protocol**
-such as **http://XXXX:5265/swagger**
+In case of testing with the public published api, all requests must be made for **HOST** = , **Port** = 5000 and **HTTPS protocol**
+such as **http://XXXX:5000/swagger**. All requests can be made directly, or from the SwaggerUI in browser.
 
 
 
