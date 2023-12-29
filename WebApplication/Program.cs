@@ -20,19 +20,26 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-if (builder.Environment.IsDevelopment())
-{
-    // Use an in-memory database for development
-    builder.Services.AddDbContext<AppDbContext>(options =>
-        options.UseInMemoryDatabase("InMemoryDatabase"));
-}
 
-else
-{
-    // Use a real database in other environments
-    var connectionString = builder.Configuration.GetConnectionString("AppDbConnectionString");
-    builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), b => b.MigrationsAssembly("CoreApplication")));
-}
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseInMemoryDatabase("InMemoryDatabase"));
+
+
+// This is commented for application simplicity, using InMemoryDatabase for all cases is easier since it's just for testing.
+// If the user wants another DB, just uncomment both lines below
+//if (builder.Environment.IsDevelopment())
+//{
+// Use an in-memory database for development
+//builder.Services.AddDbContext<AppDbContext>(options =>
+//    options.UseInMemoryDatabase("InMemoryDatabase"));
+//}
+
+//else
+//{
+//    // Use a real database in other environments
+//    var connectionString = builder.Configuration.GetConnectionString("AppDbConnectionString");
+//    builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), b => b.MigrationsAssembly("CoreApplication")));
+//}
 
 var app = builder.Build();
 
